@@ -17,33 +17,34 @@ export default function user() {
 							<div className="mr-5">
 								<div className="border-solid border-b-2 border-slate-400">
 									<label htmlFor="kode">
-										<h1 className="font-semibold">Kode Obat</h1>
+										<h1 className="font-semibold">Role</h1>
 										<input
 											type="text"
 											id="kode"
 											className="w-72 focus:outline-none"
-											placeholder="masukkan kode obat"
+											placeholder="masukkan role"
 										/>
 									</label>
 								</div>
 								<div className="mt-5 border-solid border-b-2 border-slate-400">
 									<label htmlFor="nama">
-										<h1 className="font-semibold">Nama Obat</h1>
+										<h1 className="font-semibold">Nama</h1>
 										<input
 											type="text"
 											id="nama"
 											className="w-72 focus:outline-none"
-											placeholder="masukkan nama obat"
+											placeholder="masukkan nama"
 										/>
 									</label>
 								</div>
 								<div className="mt-5 border-solid border-b-2 border-slate-400">
 									<label htmlFor="expired_date">
-										<h1 className="font-semibold">Expired Date</h1>
+										<h1 className="font-semibold">Email</h1>
 										<input
-											type="date"
+											type="email"
 											id="expired_date"
 											className="w-72 focus:outline-none"
+											placeholder="masukkan email"
 										/>
 									</label>
 								</div>
@@ -52,23 +53,23 @@ export default function user() {
 							<div className="ml-5">
 								<div className="border-solid border-b-2 border-slate-400">
 									<label htmlFor="jumlah">
-										<h1 className="font-semibold">Jumlah</h1>
+										<h1 className="font-semibold">Username</h1>
 										<input
 											type="text"
 											id="jumlah"
 											className="w-72 focus:outline-none"
-											placeholder="masukkan jumlah"
+											placeholder="masukkan username"
 										/>
 									</label>
 								</div>
 								<div className="mt-5 border-solid border-b-2 border-slate-400">
 									<label htmlFor="harga">
-										<h1 className="font-semibold">Harga Per Unit</h1>
+										<h1 className="font-semibold">Password</h1>
 										<input
 											type="text"
 											id="harga"
 											className="w-72 focus:outline-none"
-											placeholder="masukkan harga"
+											placeholder="masukkan password"
 										/>
 									</label>
 								</div>

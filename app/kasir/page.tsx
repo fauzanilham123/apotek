@@ -1,15 +1,32 @@
-import SidebarAdmin from "../components/sidebarAdmin/sidebarAdmin";
+import Image from "next/image";
 import Link from "next/link";
+import Kasir from "../../public/kasir.png";
 
-export default function user() {
+export default function kasir() {
 	return (
-		<div className="md:flex bg-white">
-			<div>
-				<SidebarAdmin />
+		<div className="container md:flex bg-white">
+			<div className="h-full w-full bg-black md:w-72 md:h-[1000px] flex justify-center  md:block">
+				<h1 className="text-white text-center p-2 md:pt-10 w-64 ml-16 md:ml-0">
+					APOTEKER
+				</h1>
+				<div className="hidden md:w-52 md:flex md:mx-auto mt-5">
+					<Image src={Kasir} alt="apotek" />
+				</div>
+				<div className="text-white text-center mt-5 hidden md:block">
+					<h1>
+						KELOLA <br />
+						TRANSAKSI
+					</h1>
+				</div>
+				<Link href="#">
+					<div className="text-white w-[70px] p-1 bg-lime-600 md:mx-auto rounded-md border-2 border-solid border-white active:bg-lime-700 md:mt-52">
+						<h1>Log out</h1>
+					</div>
+				</Link>
 			</div>
 			<div className="w-full">
 				<div className="mt-2 mb-3">
-					<h1 className="font-bold text-center">Kelola User</h1>
+					<h1 className="font-bold text-center">Form Transaksi</h1>
 				</div>
 				<div className="ml-3">
 					<form action="">
@@ -17,7 +34,7 @@ export default function user() {
 							<div className="md:mr-24 mr-24">
 								<div className="border-solid border-b-2 border-slate-400">
 									<label htmlFor="kode">
-										<h1 className="font-semibold">Role</h1>
+										<h1 className="font-semibold">Type Resep</h1>
 										<input
 											type="text"
 											id="kode"
@@ -28,54 +45,87 @@ export default function user() {
 								</div>
 								<div className="mt-5 border-solid border-b-2 border-slate-400">
 									<label htmlFor="nama">
-										<h1 className="font-semibold">Nama</h1>
+										<h1 className="font-semibold">No Resep</h1>
 										<input
 											type="text"
 											id="nama"
 											className="w-72 focus:outline-none"
-											placeholder="masukkan nama"
+											placeholder="masukkan no resep"
 										/>
 									</label>
 								</div>
 								<div className="mt-5 border-solid border-b-2 border-slate-400">
 									<label htmlFor="expired_date">
-										<h1 className="font-semibold">Email</h1>
+										<h1 className="font-semibold">Tanggal Resep</h1>
 										<input
-											type="email"
+											type="date"
 											id="expired_date"
 											className="w-72 focus:outline-none"
-											placeholder="masukkan email"
+											placeholder="masukkan no resep"
+										/>
+									</label>
+								</div>
+								<div className="mt-5 border-solid border-b-2 border-slate-400">
+									<label htmlFor="name">
+										<h1 className="font-semibold">Nama Pasien</h1>
+										<input
+											type="text"
+											id="name"
+											className="w-72 focus:outline-none"
+											placeholder="masukkan nama pasien"
 										/>
 									</label>
 								</div>
 							</div>
-							<div className="h-52 bg-green-500 w-2 hidden md:block" />
+							<div className="h-72 bg-green-500 w-2 hidden md:block" />
 							<div className="md:ml-24 mr-24 md:mr-0">
 								<div className="border-solid border-b-2 border-slate-400">
 									<label htmlFor="jumlah">
-										<h1 className="font-semibold">Username</h1>
+										<h1 className="font-semibold">Nama Dokter</h1>
 										<input
 											type="text"
 											id="jumlah"
 											className="w-72 focus:outline-none"
-											placeholder="masukkan username"
+											placeholder="masukkan nama dokter"
+										/>
+									</label>
+								</div>
+								<div className="mt-5 border-solid border-b-2 border-slate-400">
+									<label htmlFor="nama_obat">
+										<h1 className="font-semibold">Nama Obat</h1>
+										<input
+											type="text"
+											id="nama_obat"
+											className="w-72 focus:outline-none"
+											placeholder="masukkan nama obat"
 										/>
 									</label>
 								</div>
 								<div className="mt-5 border-solid border-b-2 border-slate-400">
 									<label htmlFor="harga">
-										<h1 className="font-semibold">Password</h1>
+										<h1 className="font-semibold">Harga</h1>
 										<input
 											type="text"
 											id="harga"
 											className="w-72 focus:outline-none"
-											placeholder="masukkan password"
+											placeholder="masukkan Harga"
+										/>
+									</label>
+								</div>
+								<div className="mt-5 border-solid border-b-2 border-slate-400">
+									<label htmlFor="quantity">
+										<h1 className="font-semibold">Quantity</h1>
+										<input
+											type="text"
+											id="quantity"
+											className="w-72 focus:outline-none"
+											placeholder="masukkan quantity"
 										/>
 									</label>
 								</div>
 							</div>
 						</div>
-						<div className="mt-2 md:ml-24">
+						<div className="mt-2 md:ml-28">
 							<input
 								type="button"
 								value="Tambah"
@@ -168,6 +218,22 @@ export default function user() {
 							</tr>
 						</tbody>
 					</table>
+				</div>
+				<div className="mt-3 ml-28">
+					<h1>24000</h1>
+					<div className="mt-3 flex">
+						<h1 className="rounded-md bg-slate-200 p-1 w-min cursor-pointer">
+							Bayar
+						</h1>
+						<input
+							type="text"
+							className="ml-3 focus:outline-none border-solid border-b-2 border-slate-400"
+						/>
+					</div>
+					<div className="mt-3 flex">
+						<p>Kembali</p>
+						<p className="ml-3">7000</p>
+					</div>
 				</div>
 			</div>
 		</div>

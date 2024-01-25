@@ -1,7 +1,7 @@
 import SidebarAdmin from "../components/sidebarAdmin/sidebarAdmin";
 import Link from "next/link";
 
-export default function user() {
+export default function Obat() {
 	return (
 		<div className="md:flex bg-white">
 			<div>
@@ -9,7 +9,7 @@ export default function user() {
 			</div>
 			<div className="w-full">
 				<div className="mt-2 mb-3">
-					<h1 className="font-bold text-center">Kelola User</h1>
+					<h1 className="font-bold text-center">Kelola Obat</h1>
 				</div>
 				<div className="ml-3">
 					<form action="">
@@ -17,34 +17,33 @@ export default function user() {
 							<div className="md:mr-24 mr-24">
 								<div className="border-solid border-b-2 border-slate-400">
 									<label htmlFor="kode">
-										<h1 className="font-semibold">Role</h1>
+										<h1 className="font-semibold">Kode Obat</h1>
 										<input
 											type="text"
 											id="kode"
 											className="w-72 focus:outline-none"
-											placeholder="masukkan role"
+											placeholder="masukkan kode obat"
 										/>
 									</label>
 								</div>
 								<div className="mt-5 border-solid border-b-2 border-slate-400">
 									<label htmlFor="nama">
-										<h1 className="font-semibold">Nama</h1>
+										<h1 className="font-semibold">Nama Obat</h1>
 										<input
 											type="text"
 											id="nama"
 											className="w-72 focus:outline-none"
-											placeholder="masukkan nama"
+											placeholder="masukkan nama obat"
 										/>
 									</label>
 								</div>
 								<div className="mt-5 border-solid border-b-2 border-slate-400">
 									<label htmlFor="expired_date">
-										<h1 className="font-semibold">Email</h1>
+										<h1 className="font-semibold">Expired date</h1>
 										<input
-											type="email"
+											type="date"
 											id="expired_date"
 											className="w-72 focus:outline-none"
-											placeholder="masukkan email"
 										/>
 									</label>
 								</div>
@@ -53,23 +52,23 @@ export default function user() {
 							<div className="md:ml-24 mr-24 md:mr-0">
 								<div className="border-solid border-b-2 border-slate-400">
 									<label htmlFor="jumlah">
-										<h1 className="font-semibold">Username</h1>
+										<h1 className="font-semibold">Jumlah</h1>
 										<input
 											type="text"
 											id="jumlah"
-											className="w-72 focus:outline-none"
-											placeholder="masukkan username"
+											className="md:w-72 focus:outline-none"
+											placeholder="masukkan jumlah"
 										/>
 									</label>
 								</div>
 								<div className="mt-5 border-solid border-b-2 border-slate-400">
 									<label htmlFor="harga">
-										<h1 className="font-semibold">Password</h1>
+										<h1 className="font-semibold">Harga Per Unit</h1>
 										<input
 											type="text"
 											id="harga"
 											className="w-72 focus:outline-none"
-											placeholder="masukkan password"
+											placeholder="masukkan harga"
 										/>
 									</label>
 								</div>
@@ -84,17 +83,14 @@ export default function user() {
 						</div>
 					</form>
 					<div className="md:ml-[700px] mb-1 mt-3 md:mt-0">
-						<label htmlFor="cari">
-							<h1 className="inline mr-2">Cari</h1>
-							<input
-								type="text"
-								className="focus:outline-none border-solid border-b-2 border-slate-400"
-								id="cari"
-							/>
-						</label>
+						<h1 className="inline mr-2">Cari</h1>
+						<input
+							type="text"
+							className="focus:outline-none border-solid border-b-2 border-slate-400"
+						/>
 					</div>
 				</div>
-				<div className="relative flex flex-col md:w-[900px] h-72 overflow-scroll text-gray-700 bg-white shadow-md rounded-xl bg-clip-border md:left-[58px] ">
+				<div className="relative flex flex-col md:w-[900px] w-auto h-72 overflow-scroll text-gray-700 bg-white shadow-md rounded-xl bg-clip-border md:left-[58px] ">
 					<table className="w-full text-left table-auto min-w-max">
 						<thead>
 							<tr>
@@ -105,22 +101,22 @@ export default function user() {
 								</th>
 								<th className="p-4 border-b border-gray-300 bg-gray-200">
 									<p className="block font-sans text-sm antialiased font-normal leading-none text-gray-900 opacity-70">
-										Role
+										Kode Obat
 									</p>
 								</th>
 								<th className="p-4 border-b border-gray-300 bg-gray-200">
 									<p className="block font-sans text-sm antialiased font-normal leading-none text-gray-900 opacity-70">
-										Nama
+										Nama Obat
 									</p>
 								</th>
 								<th className="p-4 border-b border-gray-300 bg-gray-200">
 									<p className="block font-sans text-sm antialiased font-normal leading-none text-gray-900 opacity-70">
-										Username
+										Expired Date
 									</p>
 								</th>
 								<th className="p-4 border-b border-gray-300 bg-gray-200">
 									<p className="block font-sans text-sm antialiased font-normal leading-none text-gray-900 opacity-70">
-										Email
+										Jumlah
 									</p>
 								</th>
 								<th className="p-4 border-b border-gray-300 bg-gray-200">
